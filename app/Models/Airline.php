@@ -10,8 +10,15 @@ class Airline extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
+    protected $table = 'airlines';
+
     public function flight()
     {
-        $this->hasMany(Flight::class);
+        return $this->hasMany(Flight::class);
+    }
+
+    public function bookings()
+    {
+        return $this->morphMany(Bookings::class, 'category');
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Rooms>
  */
-class RoomFactory extends Factory
+class RoomsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -23,8 +23,8 @@ class RoomFactory extends Factory
             'detail' => $this->faker->paragraph,
             'capacity' => $this->faker->numberBetween(1, 10),
             'price' => $this->faker->numberBetween(500_000, 5_000_000),
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

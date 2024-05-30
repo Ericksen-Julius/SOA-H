@@ -11,8 +11,11 @@ class Airport extends Model
 
     protected $guarded = ['id'];
 
+    protected $table = 'airport';
+
+
     public function flight()
     {
-        $this->hasMany(Flight::class);
+        return $this->hasMany(Flight::class);
     }
 }

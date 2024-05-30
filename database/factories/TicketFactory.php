@@ -21,8 +21,8 @@ class TicketFactory extends Factory
             'date' => $this->faker->date(),
             'start_time' => $this->faker->time(),
             'end_time' => $this->faker->time(),
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

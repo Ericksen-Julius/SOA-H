@@ -24,8 +24,8 @@ class HotelsFactory extends Factory
             'province' => $this->faker->state,
             'city' => $this->faker->city,
             'post_code' => $this->faker->postcode,
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

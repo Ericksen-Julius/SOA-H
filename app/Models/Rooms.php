@@ -10,8 +10,14 @@ class Rooms extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
+    protected $table = 'room_type';
+
     public function hotels()
     {
-        $this->belongsTo(Hotels::class);
+        return $this->belongsTo(Hotels::class, 'hotel_id');
     }
+    // public function bookings()
+    // {
+    //     return $this->morphMany(Bookings::class, 'category');
+    // }
 }

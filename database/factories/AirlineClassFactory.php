@@ -18,8 +18,8 @@ class AirlineClassFactory extends Factory
     {
         return [
             'name' => $this->faker->word . ' Class', // Menghasilkan nama kelas secara acak
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

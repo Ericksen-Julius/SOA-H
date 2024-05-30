@@ -18,8 +18,8 @@ class AirlineFactory extends Factory
     {
         return [
             'name' => $this->faker->company,
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

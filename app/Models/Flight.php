@@ -11,23 +11,25 @@ class Flight extends Model
 
     protected $guarded = ['id'];
 
+    protected $table = 'flights';
+
     public function airline()
     {
-        $this->belongsTo(Airline::class);
+        return $this->belongsTo(Airline::class);
     }
 
     public function airline_class()
     {
-        $this->belongsTo(AirlineClass::class, 'class_type');
+        return $this->belongsTo(AirlineClass::class, 'class_type');
     }
 
     public function airport_origin()
     {
-        $this->belongsTo(Airport::class);
+        return $this->belongsTo(Airport::class);
     }
 
     public function airport_destination()
     {
-        $this->belongsTo(Airport::class);
+        return $this->belongsTo(Airport::class);
     }
 }

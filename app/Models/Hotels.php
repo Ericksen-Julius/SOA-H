@@ -10,8 +10,10 @@ class Hotels extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
+    protected $table = 'hotels';
+
     public function rooms()
     {
-        $this->hasMany(Rooms::class);
+        return $this->hasMany(Rooms::class, 'hotel_id');
     }
 }

@@ -11,8 +11,14 @@ class Ticket extends Model
 
     protected $guarded = ['id'];
 
+    protected $table = 'tickets';
+
     public function flight()
     {
-        $this->belongsTo(Flight::class);
+        return $this->belongsTo(Flight::class);
     }
+    // public function bookings()
+    // {
+    //     return $this->morphMany(Bookings::class, 'product');
+    // }
 }

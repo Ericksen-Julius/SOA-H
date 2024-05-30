@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('category', function (Blueprint $table) {
             $table->id();
             $table->string('category_type');
-            $table->unsignedBigInteger('entity_id');
             $table->timestamps();
         });
     }

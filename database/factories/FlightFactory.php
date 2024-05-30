@@ -24,8 +24,8 @@ class FlightFactory extends Factory
             'capacity' => $this->faker->numberBetween(100, 300), // Misalnya, kapasitas antara 100 hingga 300
             'weight_limit' => $this->faker->numberBetween(1000, 5000), // Misalnya, batas berat antara 1000 hingga 5000
             'price' => $this->faker->numberBetween(100, 1000), // Misalnya, harga antara 100 hingga 1000
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

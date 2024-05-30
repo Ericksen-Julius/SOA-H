@@ -18,8 +18,8 @@ class AirportFactory extends Factory
     {
         return [
             'name' => $this->faker->city . ' Airport',
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
-            'updated_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }
